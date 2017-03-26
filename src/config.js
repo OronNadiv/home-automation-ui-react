@@ -1,0 +1,6 @@
+export const LOGIN_URL = process.env.LOGIN_URL || '//localhost:3001'
+export const ALARM_URL = process.env.ALARM_URL || '//localhost:3002'
+export const GARAGE_URL = process.env.GARAGE_URL || '//localhost:3003'
+export const PUSH_URL = process.env.PUSH_URL || '//localhost:3005'
+export const STORAGE_URL = process.env.STORAGE_URL || '//localhost:3006'
+export const CAMERA_URL = process.env.CAMERA_URL || '//localhost:3007'

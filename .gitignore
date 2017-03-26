@@ -1,0 +1,8 @@
+dist
+node_modules
+**/*.log
+.idea
+**/.DS_Store
+ha
+*.iml
+coverage

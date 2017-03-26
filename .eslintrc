@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "plugins": [
+    "promise",
+    "react",
+    "standard"
+  ],
+  "globals": {
+    "NODE_ENV": true,
+    "process": true,
+    "__DEV__": true,
+    "__PROD__": true,
+    "__TEST__": true,
+    "__COVERAGE__": true,
+    "__BASENAME__": true
+  }
+}
