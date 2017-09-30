@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { List, ListItem } from 'material-ui/List'
 import PersonIcon from 'material-ui/svg-icons/social/person'
 import PersonOutlineIcon from 'material-ui/svg-icons/social/person-outline'

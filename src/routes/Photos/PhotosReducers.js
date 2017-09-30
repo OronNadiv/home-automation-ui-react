@@ -1,8 +1,8 @@
 import { fromJS } from 'immutable'
 import { FETCHED_PHOTOS, TOKEN_PHOTO } from './PhotosActions'
-import { FETCHED_PHOTO } from 'store/meReducer'
+import { FETCHED_PHOTO } from '../../store/meReducer'
 import moment from 'moment'
-import { STORAGE_URL } from 'config'
+import { STORAGE_URL } from '../../config'
 import resolver from 'url-join'
 
 const initialState = fromJS({

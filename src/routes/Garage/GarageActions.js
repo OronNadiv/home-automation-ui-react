@@ -1,5 +1,5 @@
-import request from 'utils/request'
-import { GARAGE_URL } from 'config'
+import request from '../../utils/request'
+import { GARAGE_URL } from '../../config'
 import resolver from 'url-join'
 
 const PREFIX = 'GARAGE'

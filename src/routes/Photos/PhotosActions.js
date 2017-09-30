@@ -1,5 +1,5 @@
-import request from 'utils/request'
-import { STORAGE_URL, CAMERA_URL } from 'config'
+import request from '../../utils/request'
+import { STORAGE_URL, CAMERA_URL } from '../../config'
 import resolver from 'url-join'
 import moment from 'moment'
 

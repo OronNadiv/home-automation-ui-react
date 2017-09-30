@@ -2,7 +2,7 @@ deployment:
   prod:
     branch: master
     commands:
-      - npm run deploy:prod
+      - npm run build
       - aws s3 sync dist s3://home.nadiv.us/ --delete
 test:
   override:

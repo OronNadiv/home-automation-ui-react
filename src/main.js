@@ -2,8 +2,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import createStore from './store/createStore'
 import './styles/main.scss'
-import { LOGIN_URL } from 'config'
-import { getToken } from 'utils/cookies'
+import { LOGIN_URL } from './config'
+import { getToken } from './utils/cookies'
 // Store Initialization
 // ------------------------------------
 const store = createStore(window.__INITIAL_STATE__)

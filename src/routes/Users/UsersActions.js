@@ -1,6 +1,6 @@
 import resolver from 'url-join'
-import { LOGIN_URL } from 'config'
-import request from 'utils/request'
+import { LOGIN_URL } from '../../config'
+import request from '../../utils/request'
 import { Map as IMap } from 'immutable'
 
 const PREFIX = 'USERS'

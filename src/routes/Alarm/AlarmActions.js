@@ -1,6 +1,6 @@
 import resolver from 'url-join'
-import { ALARM_URL } from 'config'
-import request from 'utils/request'
+import { ALARM_URL } from '../../config'
+import request from '../../utils/request'
 
 const PREFIX = 'ALARM'
 

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import CarIcon from 'material-ui/svg-icons/maps/directions-car'
 import NotificationsActiveIcon from 'material-ui/svg-icons/social/notifications-active'
 import PhotosIcon from 'material-ui/svg-icons/image/photo-camera'

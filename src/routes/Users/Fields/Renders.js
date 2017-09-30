@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react'
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const MUISelectField = require('material-ui/SelectField').default
 const MUITextField = require('material-ui/TextField').default

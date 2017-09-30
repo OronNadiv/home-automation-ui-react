@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Tabs, Tab } from 'material-ui/Tabs'
 import { List, ListItem } from 'material-ui/List'
 import IPropTypes from 'react-immutable-proptypes'

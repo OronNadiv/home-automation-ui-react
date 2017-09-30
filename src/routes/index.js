@@ -1,6 +1,6 @@
 import React from 'react'
 import { browserHistory, Router, Route, Redirect } from 'react-router'
-import CoreLayout from 'layouts/CoreLayout'
+import CoreLayout from '../layouts/CoreLayout'
 import GarageRoute from './Garage'
 import AlarmRoute from './Alarm'
 import PhotosRoute from './Photos'

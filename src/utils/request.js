@@ -1,5 +1,5 @@
 import requestPromised from 'request-promise'
-import { LOGIN_URL } from 'config'
+import { LOGIN_URL } from '../config'
 import { getToken } from './cookies'
 
 const request = requestPromised.defaults({ json: true })

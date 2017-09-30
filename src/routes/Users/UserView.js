@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import IPropTypes from 'react-immutable-proptypes'
 import Drawer from 'material-ui/Drawer'
 import { reduxForm } from 'redux-form'

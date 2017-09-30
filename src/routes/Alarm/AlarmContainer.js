@@ -1,5 +1,5 @@
 import View from './AlarmView'
-import { fetchMe } from 'store/meReducer'
+import { fetchMe } from '../../store/meReducer'
 import { connect } from 'react-redux'
 
 import {

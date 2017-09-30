@@ -1,6 +1,6 @@
 import { fromJS } from 'immutable'
 import { CHANGED_DOOR_STATE, FETCHED_RECENT_STATES } from './GarageActions'
-import { DOOR_STATE_CREATED } from 'store/meReducer'
+import { DOOR_STATE_CREATED } from '../../store/meReducer'
 import moment from 'moment'
 
 const initialState = fromJS({

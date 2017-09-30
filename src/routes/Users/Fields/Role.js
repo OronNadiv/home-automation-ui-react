@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import MenuItem from 'material-ui/MenuItem'
 import { Field } from 'redux-form'
 import { SelectField } from './Renders'

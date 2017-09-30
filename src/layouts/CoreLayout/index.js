@@ -1,9 +1,6 @@
 import View from './CoreLayout'
 import { connect } from 'react-redux'
-
-import {
-  fetchMe
-} from 'store/meReducer'
+import { fetchMe } from '../../store/meReducer'
 
 const mapDispatchToProps = {
   fetchMe

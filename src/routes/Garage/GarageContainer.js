@@ -1,6 +1,6 @@
 import View from './GarageView'
 import { connect } from 'react-redux'
-import { fetchMe } from 'store/meReducer'
+import { fetchMe } from '../../store/meReducer'
 import {
   fetchStates,
   changeDoorState

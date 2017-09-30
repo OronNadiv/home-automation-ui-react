@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { Field } from 'redux-form'
 import { Toggle } from './Renders'
 import { lightGreen500 } from 'material-ui/styles/colors'

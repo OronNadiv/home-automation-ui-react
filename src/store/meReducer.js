@@ -1,8 +1,8 @@
-import request from 'utils/request'
+import request from '../utils/request'
 import { fromJS } from 'immutable'
-import { LOGIN_URL, PUSH_URL } from 'config'
+import { LOGIN_URL, PUSH_URL } from '../config'
 import resolver from 'url-join'
-import { getToken } from 'utils/cookies'
+import { getToken } from '../utils/cookies'
 import IO from 'socket.io-client'
 
 const PREFIX_ME = 'ME'

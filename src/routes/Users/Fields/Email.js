@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import { TextField } from './Renders'
 import { Field } from 'redux-form'
 import { required, validEmail } from './validations'
