@@ -7,3 +7,4 @@ ha
 *.iml
 coverage
 package-lock.json
+deploy.sh
