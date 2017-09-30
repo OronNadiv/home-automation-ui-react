@@ -1,13 +1,14 @@
 import React, { PropTypes } from 'react'
-import SelectField from 'material-ui/SelectField'
-import TextField from 'material-ui/TextField'
-import Toggle from 'material-ui/Toggle'
 
-exports.TextField = ({ input, label, meta: { touched, error, dirty, valid }, ...custom }) => {
+const MUISelectField = require('material-ui/SelectField').default
+const MUITextField = require('material-ui/TextField').default
+const MUIToggle = require('material-ui/Toggle').default
+
+export const TextField = ({ input, label, meta: { touched, error, dirty, valid }, ...custom }) => {
   const { onBlurCallback } = custom
 
   return (
-    <TextField
+    <MUITextField
       style={{
         marginBottom: 30,
         width: 200
@@ -24,18 +25,18 @@ exports.TextField = ({ input, label, meta: { touched, error, dirty, valid }, ...
   )
 }
 
-exports.TextField.propTypes = {
+TextField.propTypes = {
   input: PropTypes.object.isRequired,
   meta: PropTypes.object.isRequired,
   label: PropTypes.string.isRequired
 }
 
-exports.SelectField = ({ input, label, meta: { touched, error }, children, ...custom }) => {
+export const SelectField = ({ input, label, meta: { touched, error }, children, ...custom }) => {
   const { disabled, onChangeCallback } = custom
 
   return (
     <span style={{ textAlign: 'left' }}>
-      <SelectField
+      <MUISelectField
         style={{
           marginBottom: 30,
           width: 200
@@ -55,18 +56,18 @@ exports.SelectField = ({ input, label, meta: { touched, error }, children, ...cu
   )
 }
 
-exports.SelectField.propTypes = {
+SelectField.propTypes = {
   input: PropTypes.object.isRequired,
   meta: PropTypes.object.isRequired,
   label: PropTypes.string.isRequired,
   children: PropTypes.element.isRequired
 }
 
-exports.Toggle = ({ input, ...custom }) => {
+export const Toggle = ({ input, ...custom }) => {
   const { onToggleCallback, toggledLabel, notToggledLabel, toggledColor } = custom
 
   return (
-    <Toggle
+    <MUIToggle
       style={{
         marginBottom: 30,
         width: 200
@@ -84,6 +85,6 @@ exports.Toggle = ({ input, ...custom }) => {
   )
 }
 
-exports.Toggle.propTypes = {
+Toggle.propTypes = {
   input: PropTypes.object.isRequired
 }

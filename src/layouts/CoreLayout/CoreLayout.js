@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react'
-import 'styles/core.scss'
 import CarIcon from 'material-ui/svg-icons/maps/directions-car'
 import NotificationsActiveIcon from 'material-ui/svg-icons/social/notifications-active'
 import PhotosIcon from 'material-ui/svg-icons/image/photo-camera'

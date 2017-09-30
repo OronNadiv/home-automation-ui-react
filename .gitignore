@@ -1,10 +1,12 @@
-dist
+.DS_STORE
+*.log
 node_modules
-**/*.log
+dist
+coverage
 .idea
+**/*.log
 **/.DS_Store
 ha
 *.iml
-coverage
 package-lock.json
 deploy.sh

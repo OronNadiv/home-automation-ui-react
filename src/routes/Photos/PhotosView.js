@@ -7,8 +7,6 @@ import moment from 'moment'
 import Snackbar from 'material-ui/Snackbar'
 import Drawer from 'material-ui/Drawer'
 import { PhotoSwipe } from 'react-photoswipe'
-import 'photoswipe/dist/photoswipe.css'
-import 'photoswipe/dist/default-skin/default-skin.css'
 import { black, lightGreenA400 as successColor, redA400 as failColor } from 'material-ui/styles/colors'
 
 class PhotosView extends Component {

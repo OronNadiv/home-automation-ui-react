@@ -4,8 +4,9 @@ import { Provider } from 'react-redux'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
 import injectTapEventPlugin from 'react-tap-event-plugin'
-injectTapEventPlugin()
 import { lightBlue500, white } from 'material-ui/styles/colors'
+
+injectTapEventPlugin()
 
 const muiTheme = getMuiTheme(
   {
@@ -22,7 +23,6 @@ const muiTheme = getMuiTheme(
 )
 
 class AppContainer extends Component {
-
   shouldComponentUpdate () {
     return false
   }
