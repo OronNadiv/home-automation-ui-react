@@ -50,8 +50,9 @@ const config = {
       'CAMERA_URL',
       'GARAGE_URL',
       'LOGIN_URL',
-      'PUSH_URL',
-      'STORAGE_URL'
+      'STORAGE_URL',
+      'PUBNUB_PUBLISH_KEY',
+      'PUBNUB_SUBSCRIBE_KEY'
     ]),
     new webpack.DefinePlugin(Object.assign({
       'process.env': { NODE_ENV: JSON.stringify(project.env) },

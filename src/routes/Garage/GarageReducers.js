@@ -1,6 +1,6 @@
 import { fromJS } from 'immutable'
 import { CHANGED_DOOR_STATE, FETCHED_RECENT_STATES } from './GarageActions'
-import { DOOR_STATE_CREATED } from '../../store/meReducer'
+import { GARAGE_STATE_CREATED } from '../../store/pubnubReducer'
 import moment from 'moment'
 
 const initialState = fromJS({
@@ -19,13 +19,13 @@ const processDoorState = (state) => {
 }
 
 const ACTION_HANDLERS = {
-  [CHANGED_DOOR_STATE]: (state = initialState, { isSuccess }) => {
+  [CHANGED_DOOR_STATE]: (state = initialState, {isSuccess}) => {
     state = state
       .setIn(['request', 'timestamp'], new Date().valueOf())
       .setIn(['request', 'isSuccess'], isSuccess)
     return state
   },
-  [FETCHED_RECENT_STATES]: (state = initialState, { states }) => {
+  [FETCHED_RECENT_STATES]: (state = initialState, {states}) => {
     states.forEach((doorState) => processDoorState(doorState))
     state = state.set('states', fromJS({
       data: states,
@@ -33,7 +33,7 @@ const ACTION_HANDLERS = {
     }))
     return state
   },
-  [DOOR_STATE_CREATED]: (state = initialState, { doorState }) => {
+  [GARAGE_STATE_CREATED]: (state = initialState, {doorState}) => {
     processDoorState(doorState)
     state = state.updateIn(['states', 'data'], (doorStates) => doorStates.unshift(fromJS(doorState)))
     return state

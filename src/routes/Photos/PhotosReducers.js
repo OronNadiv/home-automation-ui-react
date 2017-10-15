@@ -1,6 +1,6 @@
 import { fromJS } from 'immutable'
 import { FETCHED_PHOTOS, TOKEN_PHOTO } from './PhotosActions'
-import { FETCHED_PHOTO } from '../../store/meReducer'
+import { CAMERA_FETCHED_PHOTO } from '../../store/pubnubReducer'
 import moment from 'moment'
 import { STORAGE_URL } from '../../config'
 import resolver from 'url-join'
@@ -39,7 +39,7 @@ const ACTION_HANDLERS = {
     }))
     return state
   },
-  [FETCHED_PHOTO]: (state = initialState, { photo }) => {
+  [CAMERA_FETCHED_PHOTO]: (state = initialState, { photo }) => {
     photo = processPhoto(photo)
     state = state.updateIn(['photos', 'data'], data => data.unshift(fromJS(photo)))
     return state

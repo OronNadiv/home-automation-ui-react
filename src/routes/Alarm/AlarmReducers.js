@@ -6,7 +6,7 @@ import {
   FETCHED_RECENT_TOGGLES,
   CHANGED_ALARM_STATE
 } from './AlarmActions'
-import { ALARM_TOGGLE_CREATED } from '../../store/meReducer'
+import { ALARM_TOGGLE_CREATED } from '../../store/pubnubReducer'
 
 const initialState = fromJS({
   acks: {

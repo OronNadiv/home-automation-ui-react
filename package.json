@@ -26,6 +26,7 @@
     "bluebird": "^3.4.7",
     "compression": "^1.6.2",
     "express": "^4.14.0",
+    "home-automation-pubnub": "^0.3.0",
     "immutable": "^3.8.1",
     "material-ui": "^0.17.1",
     "moment": "^2.17.1",
@@ -48,7 +49,6 @@
     "request": "^2.83.0",
     "request-promise": "^4.1.1",
     "sane-email-validation": "^1.1.0",
-    "socket.io-client": "^1.7.2",
     "underscore.string": "^3.3.4",
     "url-join": "^2.0.2",
     "whatwg-fetch": "^2.0.3"
