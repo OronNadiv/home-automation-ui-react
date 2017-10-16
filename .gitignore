@@ -1,5 +1,4 @@
 .DS_STORE
-*.log
 node_modules
 dist
 coverage
@@ -10,3 +9,4 @@ ha
 *.iml
 package-lock.json
 deploy.sh
+**/*.pem
