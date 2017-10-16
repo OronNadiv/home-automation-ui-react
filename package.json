@@ -10,7 +10,7 @@
   },
   "license": "AGPL-3.0",
   "engines": {
-    "node": "^7",
+    "node": "^6",
     "npm": "^3"
   },
   "scripts": {
@@ -26,7 +26,7 @@
     "bluebird": "^3.4.7",
     "compression": "^1.6.2",
     "express": "^4.14.0",
-    "home-automation-pubnub": "^0.3.0",
+    "home-automation-pubnub": "^0.4.5",
     "immutable": "^3.8.1",
     "material-ui": "^0.17.1",
     "moment": "^2.17.1",

@@ -6,7 +6,8 @@ const {subscribe} = Subscriber
 const {
   CONNECTED,
   ACCESS_DENIED,
-  RECONNECTED
+  RECONNECTED,
+  NETWORK_ISSUES
 } = ListenerStatuses
 
 const PREFIX_PUBNUB = 'PUBNUB'
@@ -19,7 +20,7 @@ export const initialize = (me) => {
   return (dispatch) => {
     const onStatus = (status) => {
       const {statusCode, category} = status
-      console.log('status:', status)
+      console.log('pubnub listener status:', status)
       if (!statusCode) {
         return
       }
@@ -33,6 +34,8 @@ export const initialize = (me) => {
           console.log('PubNub returned forbidden.  Redirecting to login...',
             'category:', category)
           window.location.href = LOGIN_URL
+          return
+        case NETWORK_ISSUES: // also triggered by browser refresh.
           return
         default:
           return console.error('Unhandled status code.',
