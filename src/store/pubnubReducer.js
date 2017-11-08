@@ -7,7 +7,8 @@ const {
   CONNECTED,
   ACCESS_DENIED,
   RECONNECTED,
-  NETWORK_ISSUES
+  NETWORK_ISSUES,
+  NETWORK_UP
 } = ListenerStatuses
 
 const PREFIX_PUBNUB = 'PUBNUB'
@@ -19,14 +20,12 @@ export const PN_CONNECTION = `${PREFIX_PUBNUB}_PN_CONNECTION`
 export const initialize = (me) => {
   return (dispatch) => {
     const onStatus = (status) => {
-      const {statusCode, category} = status
+      const {category} = status
       console.log('pubnub listener status:', status)
-      if (!statusCode) {
-        return
-      }
-      switch (status.category) {
+      switch (category) {
         case CONNECTED:
         case RECONNECTED:
+        case NETWORK_UP:
           return dispatch({
             type: PN_CONNECTION
           })

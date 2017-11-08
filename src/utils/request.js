@@ -9,13 +9,14 @@ export default (options) => {
     options = { method: 'GET', uri: options }
   }
 
-  const token = getToken()
-  if (!token) {
-    window.location.href = LOGIN_URL
+  const bearer = getToken()
+  if (!bearer) {
+    // redirects to login page.
+    return window.location.href = LOGIN_URL
   }
 
   options.auth = {
-    bearer: getToken()
+    bearer
   }
 
   return request(options)
@@ -25,6 +26,7 @@ export default (options) => {
         throw ex
       }
 
+      // redirects to login page.
       window.location.href = LOGIN_URL
     })
 }
