@@ -1,36 +1,19 @@
 import React from 'react'
-import { browserHistory, Router, Route, Redirect } from 'react-router'
+import {
+  Router,
+  Route,
+  Redirect
+} from 'react-router-dom'
 import CoreLayout from '../layouts/CoreLayout'
-import GarageRoute from './Garage'
-import AlarmRoute from './Alarm'
-import PhotosRoute from './Photos'
-import UsersRoute from './Users'
+import history from '../store/history'
 
-export const createRoutes = (store) => {
+export const createRoutes = () => {
   return (
-    <Router history={browserHistory}>
-      <Route component={CoreLayout}>
-        <Route
-          path={'/garage'}
-          component={GarageRoute(store)}
-        />
-        <Route
-          path={'/alarm'}
-          component={AlarmRoute(store)}
-        />
-        <Route
-          path={'/photos'}
-          component={PhotosRoute(store)}
-        />
-        <Route
-          path={'/users'}
-          component={UsersRoute(store)}
-        />
-      </Route>
-      <Redirect
-        from='*'
-        to={'/garage'}
-      />
+    <Router history={history}>
+      <div>
+        <Route component={CoreLayout} />
+        <Redirect from='*' to={'/garage'} />
+      </div>
     </Router>
   )
 }

@@ -1,5 +1,7 @@
-import cookie from 'react-cookie'
+import Cookies from 'universal-cookie'
+
+const cookies = new Cookies()
 
 export const getToken = () => {
-  return cookie.load('XSRF-TOKEN')
+  return cookies.get('XSRF-TOKEN')
 }

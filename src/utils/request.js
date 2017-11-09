@@ -12,7 +12,8 @@ export default (options) => {
   const bearer = getToken()
   if (!bearer) {
     // redirects to login page.
-    return window.location.href = LOGIN_URL
+    window.location.href = LOGIN_URL
+    return
   }
 
   options.auth = {

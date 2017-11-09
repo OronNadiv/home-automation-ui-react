@@ -1,5 +1,4 @@
-import browserHistory from 'react-router/lib/browserHistory'
-
+import history from './history'
 // ------------------------------------
 // Constants
 // ------------------------------------
@@ -25,7 +24,7 @@ export const updateLocation = ({ dispatch }) => {
 // ------------------------------------
 // Reducer
 // ------------------------------------
-const initialState = browserHistory.getCurrentLocation()
+const initialState = history.location
 export default function locationReducer (state = initialState, action) {
   return action.type === LOCATION_CHANGE
     ? action.payload

@@ -8,6 +8,12 @@ import { BottomNavigation, BottomNavigationItem } from 'material-ui/BottomNaviga
 import Paper from 'material-ui/Paper'
 import IPropTypes from 'react-immutable-proptypes'
 import { white } from 'material-ui/styles/colors'
+import { Route } from 'react-router-dom'
+import GarageContainer from '../../routes/Garage/GarageContainer'
+import AlarmContainer from '../../routes/Alarm/AlarmContainer'
+import PhotosContainer from '../../routes/Photos/PhotosContainer'
+import UsersContainer from '../../routes/Users/UsersContainer'
+import { withRouter } from 'react-router'
 
 const GRAY = 'rgba(255, 255, 255, 0.701961)'
 
@@ -35,12 +41,12 @@ class CoreLayout extends Component {
   }
 
   select (index) {
+    const {history} = this.props
     this.setState({
       selectedIndex: index,
       title: this.titles[index]
     })
-    const router = require('react-router')
-    router.browserHistory.push(this.urls[index])
+    history.push(this.urls[index])
   }
 
   componentWillMount () {
@@ -52,7 +58,7 @@ class CoreLayout extends Component {
   }
 
   render () {
-    const { children, me } = this.props
+    const {me} = this.props
 
     const selectedIndex = this.urls.findIndex(url => window.location.pathname.startsWith(url))
     return (
@@ -62,7 +68,22 @@ class CoreLayout extends Component {
             padding: '20px 0 56px 0',
             textAlign: 'center'
           }}>
-          {children}
+          <Route
+            path={'/garage'}
+            component={GarageContainer}
+          />
+          <Route
+            path={'/alarm'}
+            component={AlarmContainer}
+          />
+          <Route
+            path={'/photos'}
+            component={PhotosContainer}
+          />
+          <Route
+            path={'/users'}
+            component={UsersContainer}
+          />
         </div>
         <Paper
           zDepth={1}
@@ -79,7 +100,7 @@ class CoreLayout extends Component {
           >
             <BottomNavigationItem
               label={
-                <span style={{ color: selectedIndex === 0 ? white : GRAY }}>
+                <span style={{color: selectedIndex === 0 ? white : GRAY}}>
                   Garage
                 </span>
               }
@@ -92,7 +113,7 @@ class CoreLayout extends Component {
             />
             <BottomNavigationItem
               label={
-                <span style={{ color: selectedIndex === 1 ? white : GRAY }}>
+                <span style={{color: selectedIndex === 1 ? white : GRAY}}>
                   Alarm
                 </span>
               }
@@ -105,9 +126,9 @@ class CoreLayout extends Component {
             />
 
             <BottomNavigationItem
-              style={{ display: me && me.get('is_trusted') ? 'initial' : 'none' }}
+              style={{display: me && me.get('is_trusted') ? 'initial' : 'none'}}
               label={
-                <span style={{ color: selectedIndex === 2 ? white : GRAY }}>
+                <span style={{color: selectedIndex === 2 ? white : GRAY}}>
                   Photos
                 </span>
               }
@@ -124,7 +145,7 @@ class CoreLayout extends Component {
                 display: me && me.get('is_admin') ? 'initial' : 'none'
               }}
               label={
-                <span style={{ color: selectedIndex === 3 ? white : GRAY }}>
+                <span style={{color: selectedIndex === 3 ? white : GRAY}}>
                   Users
                 </span>
               }
@@ -144,8 +165,8 @@ class CoreLayout extends Component {
 
 CoreLayout.propTypes = {
   me: IPropTypes.map.isRequired,
-  children: PropTypes.element.isRequired,
-  fetchMe: PropTypes.func.isRequired
+  fetchMe: PropTypes.func.isRequired,
+  history: PropTypes.object.isRequired
 }
 
-export default CoreLayout
+export default withRouter(CoreLayout)
