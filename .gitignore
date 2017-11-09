@@ -7,6 +7,5 @@ coverage
 **/.DS_Store
 ha
 *.iml
-package-lock.json
 deploy.sh
 **/*.pem
