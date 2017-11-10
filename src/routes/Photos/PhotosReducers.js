@@ -25,7 +25,7 @@ const processPhoto = (photo) => {
   photo.localTimeFormatted = moment(time).format('dddd, MMMM D, gggg h:mm:ss A')
   photo.w = 2592
   photo.h = 1944
-  photo.src = resolver(STORAGE_URL, 'files', photo.id)
+  photo.src = photo.downloadUrl
   return photo
 }
 
