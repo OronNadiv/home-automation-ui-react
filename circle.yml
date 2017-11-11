@@ -7,3 +7,6 @@ deployment:
 test:
   override:
     - echo "test"
+machine:
+  node:
+    version: 8
