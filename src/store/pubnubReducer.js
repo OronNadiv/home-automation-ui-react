@@ -56,7 +56,7 @@ export const initialize = (me) => {
               })
           }
           return
-        case 'STORAGE': {
+        case 'CAMERA': {
           switch (type) {
             case 'FILE_CREATED':
               return dispatch({

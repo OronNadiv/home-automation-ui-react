@@ -1,5 +1,5 @@
 import request from '../../utils/request'
-import { STORAGE_URL, CAMERA_URL } from '../../config'
+import { CAMERA_URL } from '../../config'
 import resolver from 'url-join'
 import moment from 'moment'
 
@@ -34,7 +34,7 @@ export const fetchPhotos = () => {
 
   return request({
     qs: { after },
-    uri: resolver(STORAGE_URL, `files`)
+    uri: resolver(CAMERA_URL, `files`)
   }).then((photos) => {
     return {
       type: FETCHED_PHOTOS,

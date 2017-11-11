@@ -20,7 +20,6 @@ __ALARM\_URL__ (required): url to the [alarm system][alarm-url] server.  Default
 __CAMERA\_URL__ (required): url to the [camera][camera-url] server.  Default: `//localhost:3007`  
 __GARAGE\_URL__ (required): url to the [garage][garage-url] server.  Default: `//localhost:3003`  
 __LOGIN\_URL__ (required): url to the [authentication][auth-url] server.  Default: `//localhost:3001`  
-__STORAGE\_URL__ (required): url to the [storage][storage-url] server.  Default: `//localhost:3006`
 
 ### License
 [AGPL-3.0](https://spdx.org/licenses/AGPL-3.0.html)
@@ -53,4 +52,3 @@ __STORAGE\_URL__ (required): url to the [storage][storage-url] server.  Default:
 [camera-url]: https://github.com/OronNadiv/camera-api
 [garage-url]: https://github.com/OronNadiv/garage-door-api
 [notifications-url]: https://github.com/OronNadiv/notifications-api
-[storage-url]: https://github.com/OronNadiv/storage-api

@@ -50,7 +50,6 @@ const config = {
       'CAMERA_URL',
       'GARAGE_URL',
       'LOGIN_URL',
-      'STORAGE_URL',
       'PUBNUB_PUBLISH_KEY',
       'PUBNUB_SUBSCRIBE_KEY'
     ]),

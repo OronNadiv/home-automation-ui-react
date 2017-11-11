@@ -2,8 +2,6 @@ import { fromJS } from 'immutable'
 import { FETCHED_PHOTOS, TOKEN_PHOTO } from './PhotosActions'
 import { CAMERA_FETCHED_PHOTO } from '../../store/pubnubReducer'
 import moment from 'moment'
-import { STORAGE_URL } from '../../config'
-import resolver from 'url-join'
 
 const initialState = fromJS({
   photos: {
