@@ -27,7 +27,7 @@
     "compression": "^1.7.1",
     "express": "^4.16.2",
     "history": "^4.7.2",
-    "home-automation-pubnub": "^0.4.5",
+    "home-automation-pubnub": "^0.4.6",
     "immutable": "^3.8.2",
     "material-ui": "^0.19.4",
     "moment": "^2.19.3",
