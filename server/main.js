@@ -20,8 +20,7 @@ if (project.env === 'development') {
     publicPath: webpackConfig.output.publicPath,
     contentBase: path.resolve(project.basePath, project.srcDir),
     hot: true,
-    quiet: false,
-    noInfo: false,
+    logLevel: 'info',
     lazy: false,
     stats: 'normal'
   }))
