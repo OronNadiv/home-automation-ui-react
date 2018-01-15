@@ -9,3 +9,4 @@ ha
 *.iml
 deploy.sh
 **/*.pem
+package-lock.json
