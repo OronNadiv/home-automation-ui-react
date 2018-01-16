@@ -18,7 +18,7 @@ const processPhoto = (photo) => {
   const name = photo.name
   const index1 = name.indexOf('-')
   const index2 = name.indexOf('.')
-  const time = parseInt(name.substr(index1 + 1, index2 - index1 - 1))
+  const time = parseInt(name.substr(index1 + 1, index2 - index1 - 1), 10)
   photo.time = time
   photo.localTimeFormatted = moment(time).format('dddd, MMMM D, gggg h:mm:ss A')
   photo.w = 2592

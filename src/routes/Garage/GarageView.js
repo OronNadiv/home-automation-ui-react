@@ -57,12 +57,14 @@ class GarageView extends Component {
               leftIcon={state.get('is_open')
                 ? (
                   <img
-                    src='/garage-open.png'
+                    alt=''
+                    src={`${process.env.PUBLIC_URL}/garage-open.png`}
                   />
                 )
                 : (
                   <img
-                    src='/garage-close.png'
+                    alt=''
+                    src={`${process.env.PUBLIC_URL}/garage-close.png`}
                   />
                 )
               }

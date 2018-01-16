@@ -54,27 +54,31 @@ export const initialize = (me) => {
                 type: ALARM_TOGGLE_CREATED,
                 toggle: payload
               })
+            default:
+              return
           }
-          return
-        case 'CAMERA': {
+        case 'CAMERAS':
           switch (type) {
             case 'FILE_CREATED':
               return dispatch({
                 type: CAMERA_FETCHED_PHOTO,
                 photo: payload
               })
+            default:
+              return
           }
-          return
-        }
-        case 'GARAGE': {
+        case 'GARAGE':
           switch (type) {
             case 'STATE_CREATED':
               return dispatch({
                 type: GARAGE_STATE_CREATED,
                 doorState: payload
               })
+            default:
+              return // eslint-disable-line no-useless-return
           }
-        }
+        default:
+          return // eslint-disable-line no-useless-return
       }
     }
 

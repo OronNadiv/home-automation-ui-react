@@ -19,7 +19,7 @@ const initialState = fromJS({
 })
 
 const ACTION_HANDLERS = {
-  [FETCHED_USERS]: (state = initialState, { users }) => {
+  [FETCHED_USERS]: (state = initialState, {users}) => {
     state = state.set('users', fromJS({
       isLoaded: true,
       data: users
@@ -30,9 +30,7 @@ const ACTION_HANDLERS = {
       if (a > b) {
         return 1
       }
-      if (a === b) {
-        return 0
-      }
+      return 0
     })
     return state
   },
@@ -43,19 +41,19 @@ const ACTION_HANDLERS = {
     }))
     return state
   },
-  [FETCHED_USER]: (state = initialState, { user }) => {
+  [FETCHED_USER]: (state = initialState, {user}) => {
     state = state.set('user', fromJS({
       isLoaded: true,
       data: user
     }))
     return state
   },
-  [UPDATED_USER]: (state = initialState, { user }) => {
+  [UPDATED_USER]: (state = initialState, {user}) => {
     const index = state.getIn(['users', 'data']).findIndex((tUser) => user.id === tUser.get('id'))
     state = state.setIn(['users', 'data', index], fromJS(user))
     return state
   },
-  [CREATED_USER]: (state = initialState, { user }) => {
+  [CREATED_USER]: (state = initialState, {user}) => {
     state = state.updateIn(['users', 'data'], (data) => data.unshift(fromJS(user)))
     return state
   }
