@@ -9,6 +9,8 @@ import Snackbar from 'material-ui/Snackbar'
 import Drawer from 'material-ui/Drawer'
 import { PhotoSwipe } from 'react-photoswipe'
 import { black, lightGreenA400 as successColor, redA400 as failColor } from 'material-ui/styles/colors'
+import '../../../node_modules/photoswipe/dist/photoswipe.css'
+import '../../../node_modules/photoswipe/dist/default-skin/default-skin.css'
 
 class PhotosView extends Component {
   constructor (props) {
