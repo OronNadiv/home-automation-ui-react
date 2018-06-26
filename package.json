@@ -23,7 +23,9 @@
     "build-js": "react-scripts build",
     "build": "npm-run-all build-css build-js",
     "lint": "eslint .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
@@ -55,7 +57,8 @@
     "sane-email-validation": "^1.1.0",
     "underscore.string": "^3.3.4",
     "universal-cookie": "^2.1.2",
-    "url-join": "^2.0.5"
+    "url-join": "^2.0.5",
+    "snyk": "^1.85.0"
   },
   "devDependencies": {
     "eslint-config-standard": "^10.2.1",
@@ -67,5 +70,6 @@
     "eslint-plugin-react": "^7.6.1",
     "eslint-plugin-standard": "^3.0.1",
     "source-map-explorer": "^1.5.0"
-  }
+  },
+  "snyk": true
 }
