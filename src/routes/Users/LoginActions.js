@@ -10,7 +10,7 @@ export const updateLogin = (id, values) => {
   return request({
     body: values,
     method: 'PATCH',
-    uri: resolver(LOGIN_URL, id)
+    uri: resolver(LOGIN_URL, id.toString())
   }).then((user) => {
     return {
       type: UPDATED_LOGIN,

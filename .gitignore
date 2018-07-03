@@ -11,6 +11,5 @@ coverage
 **/*.css
 *.iml
 deploy.sh
-package-lock.json
 build
 .snyk

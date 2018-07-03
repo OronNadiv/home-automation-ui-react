@@ -46,7 +46,7 @@ export const fetchUser = (id) => {
 
     return request({
       method: 'GET',
-      uri: resolver(LOGIN_URL, 'users', id)
+      uri: resolver(LOGIN_URL, 'users', id.toString())
     })
       .then((user) => {
         dispatch({
@@ -62,7 +62,7 @@ export const updateUser = (id, values) => {
     return request({
       body: values,
       method: 'PATCH',
-      uri: resolver(LOGIN_URL, 'users', id)
+      uri: resolver(LOGIN_URL, 'users', id.toString())
     })
       .then((user) => {
         dispatch({

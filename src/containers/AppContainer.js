@@ -4,10 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider'
 import getMuiTheme from 'material-ui/styles/getMuiTheme'
-import injectTapEventPlugin from 'react-tap-event-plugin'
 import { lightBlue500, white } from 'material-ui/styles/colors'
-
-injectTapEventPlugin()
 
 const muiTheme = getMuiTheme(
   {
