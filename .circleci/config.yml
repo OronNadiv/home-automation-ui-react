@@ -1,0 +1,9 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8
+    steps:
+      - checkout
+      - run: npm run build
+      - run: aws s3 sync build s3://home.nadiv.us/ --delete
