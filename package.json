@@ -9,8 +9,8 @@
   },
   "license": "AGPL-3.0",
   "engines": {
-    "node": "^8",
-    "npm": "^5"
+    "node": "^10",
+    "npm": "^6"
   },
   "scripts": {
     "analyze": "source-map-explorer build/static/js/main.*",
